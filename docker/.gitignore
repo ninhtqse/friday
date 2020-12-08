@@ -1,0 +1,9 @@
+/code/.composer
+/code/html/honi-backend
+/code/html/laravel-app
+/code/.bash_history
+/code/.viminfo
+/mysql/honistore
+/mysql/projectlaravel
+/nginx/sites-enabled/honi.group.conf
+/nginx/sites-enabled/laravel-app.conf
