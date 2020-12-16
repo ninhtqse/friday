@@ -19,6 +19,7 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+
 RUN usermod -u 1000 www-data
 
 USER www-data

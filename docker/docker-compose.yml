@@ -8,6 +8,9 @@ networks:
           gateway: 10.201.0.1
 services:
     nginx:
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile
         container_name: c-nginx
         image: nginx:latest
         restart: always
@@ -32,8 +35,8 @@ services:
         container_name: c-php
         restart: always
         volumes:
-        - ./code:/var/www
-        - ./php/php.ini:/etc/php/7.4/fpm/php.ini
+            - ./code:/var/www
+            - ./php/php.ini:/etc/php/7.4/fpm/php.ini
         links: 
             - mysql
             - redis
