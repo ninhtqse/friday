@@ -1022,3 +1022,6 @@
 10.201.0.1 - - [16/Dec/2020:15:39:15 +0000] "POST /login HTTP/1.1" 200 1431 "-" "PostmanRuntime/7.26.8"
 10.201.0.1 - - [16/Dec/2020:16:15:01 +0000] "GET / HTTP/1.1" 200 76291 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" "-"
 10.201.0.1 - - [16/Dec/2020:16:15:01 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://ninh.local:81/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" "-"
+10.201.0.1 - - [16/Dec/2020:16:39:20 +0000] "GET / HTTP/1.1" 200 76124 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" "-"
+10.201.0.1 - - [19/Dec/2020:06:37:13 +0000] "GET / HTTP/1.1" 200 76124 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" "-"
+10.201.0.1 - - [19/Dec/2020:06:37:14 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://ninh.local:81/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" "-"

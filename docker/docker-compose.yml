@@ -57,6 +57,21 @@ services:
         networks:
             webphp:
                 ipv4_address: 10.201.0.4
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: 'c-phpmyadmin'
+        links:
+          - mysql
+        environment:
+          PMA_HOST: mysql
+          PMA_PORT: 3306
+        ports:
+          - '8080:80'
+        volumes: 
+          - /sessions
+        networks:
+            webphp:
+                ipv4_address: 10.201.0.5
     redis:
         container_name: c-redis
         image: redis
@@ -67,7 +82,7 @@ services:
             - '6379:6379'
         networks:
             webphp:
-                ipv4_address: 10.201.0.5
+                ipv4_address: 10.201.0.6
     memcached:
         image: memcached
         ports:
