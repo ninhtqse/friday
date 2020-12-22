@@ -13,6 +13,8 @@ COPY . .
 
 EXPOSE 3000
 
+RUN npm install --save bootstrap
+
 RUN npm build
 
 CMD [ "npm", "start" ]
