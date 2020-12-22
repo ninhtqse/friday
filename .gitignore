@@ -8,3 +8,4 @@
 /node/node_modules
 /nginx/sites-enabled/honi.group.conf
 /nginx/sites-enabled/laravel-app.conf
+/nginx/log

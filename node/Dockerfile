@@ -1,10 +1,18 @@
-FROM node:alpine
+FROM node:latest
 
-WORKDIR '/app'
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-COPY package.json .
+COPY package*.json /usr/src/app/
+
 RUN npm install
+
+RUN npm install react-scripts@3.0.1 -g 
 
 COPY . .
 
-CMD ["npm", "run", "start"]
+EXPOSE 3000
+
+RUN npm build
+
+CMD [ "npm", "start" ]
