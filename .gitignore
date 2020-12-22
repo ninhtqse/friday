@@ -4,7 +4,7 @@
 /code/html/laravel-app
 /code/.bash_history
 /code/.viminfo
-/mysql/honistore
-/mysql/projectlaravel
+/mysql
+/node/node_modules
 /nginx/sites-enabled/honi.group.conf
 /nginx/sites-enabled/laravel-app.conf
