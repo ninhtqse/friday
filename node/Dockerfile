@@ -9,11 +9,13 @@ RUN npm install
 
 RUN npm install react-scripts@3.0.1 -g 
 
+RUN npm install --save bootstrap
+
+RUN npm install react-router-dom --save
+
 COPY . .
 
 EXPOSE 3000
-
-RUN npm install --save bootstrap
 
 RUN npm build
 
