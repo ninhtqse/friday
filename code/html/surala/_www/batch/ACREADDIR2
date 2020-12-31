@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ "${1}" ]
+then
+#ls --full-time ${1}   # del 2018/05/31 yoshizawa
+ls -A --full-time ${1} # add 2018/05/31 yoshizawa .htaccessを取得するためにオプション追加
+else
+exit "err"
+fi

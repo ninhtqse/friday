@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ "${1}" ]
+then
+stat ${1}`ls ${1} -tr | tail -1` | grep ^Modify | cut -d " " -f 2,3
+else
+exit "err"
+fi
