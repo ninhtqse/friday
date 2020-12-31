@@ -13,6 +13,8 @@ RUN npm install --save bootstrap
 
 RUN npm install react-router-dom --save
 
+RUN npm i axios
+
 COPY . .
 
 EXPOSE 3000
