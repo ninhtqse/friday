@@ -9,11 +9,15 @@ RUN npm install
 
 RUN npm install react-scripts@3.0.1 -g 
 
-RUN npm install --save bootstrap
-
 RUN npm install react-router-dom --save
 
+RUN npm install --save bootstrap
+
+RUN npm install --save reactstrap react react-dom
+
 RUN npm i axios
+
+RUN npm install redux react-redux --save
 
 COPY . .
 

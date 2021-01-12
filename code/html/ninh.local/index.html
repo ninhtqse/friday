@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     
-    <div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
-        <div class="block"></div>
+    <div class="test">
+        <button id="submit">click</button>
+        <button id="submit1">gen html</button>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $('input').on('change', ()=>{
+        console.log(1);
+    });
+    $('#submit1').click(function(){
+        $('.test').append('<input class="test1" type="text" name="name">');
+    })
+    $('#submit').click(function(){
+        let val = $('.test1').val();
+        console.log(val);
+    })
+</script>
 </html>

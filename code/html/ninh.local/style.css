@@ -1,7 +1,0 @@
-.block{
-    background: red;
-    width: 50px;
-    height: 40px;
-    -webkit-flex-direction: row-reverse; /* Safari */
-    flex-direction:         row-reverse;
-}

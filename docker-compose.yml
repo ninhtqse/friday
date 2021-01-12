@@ -37,7 +37,7 @@ services:
         restart: always
         volumes:
             - ./code:/var/www
-            - ./php/php.ini:/etc/php/7.4/fpm/php.ini
+            - ./php:/usr/local/etc/php/
         links: 
             - mysql
             - redis
