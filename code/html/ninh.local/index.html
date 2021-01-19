@@ -6,23 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <div class="test">
-        <button id="submit">click</button>
-        <button id="submit1">gen html</button>
-    </div>
+   
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    $('input').on('change', ()=>{
+    //bên trong else tạo ra 1 hàm tên function_test() 
+    function abc(){
+        function_test();
+    }
+    // Existing object
+    async function function_test() {
+        await getphuluc();
+        await code_so_2();
+    }
+    async function getphuluc(){
+        await $.ajax({
+            url : 'https://5fed8c32595e420017c2c9e0.mockapi.io/api/v1/users',
+            dataType:'json'
+        }).done(res => {
+            console.log(res);
+        })
+    }
+    function code_so_2(){
         console.log(1);
-    });
-    $('#submit1').click(function(){
-        $('.test').append('<input class="test1" type="text" name="name">');
-    })
-    $('#submit').click(function(){
-        let val = $('.test1').val();
-        console.log(val);
-    })
+    }
+    abc();
+
 </script>
 </html>

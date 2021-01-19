@@ -9,3 +9,6 @@
 /nginx/sites-enabled/honi.group.conf
 /nginx/sites-enabled/laravel-app.conf
 /nginx/log
+/node/node_modules
+/node/src
+/node/public
