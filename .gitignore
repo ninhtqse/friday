@@ -4,6 +4,7 @@
 /code/html/laravel-app
 /code/.bash_history
 /code/.viminfo
+/code/nails
 /mysql
 /node/node_modules
 /nginx/sites-enabled/honi.group.conf
@@ -12,3 +13,4 @@
 /node/node_modules
 /node/src
 /node/public
+/php
