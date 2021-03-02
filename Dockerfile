@@ -1,12 +1,23 @@
 FROM php:7.4-fpm
 
+WORKDIR /var/www
+
 LABEL maintainer="Ninhtq <ninhtqse@gmail.com>"
 
 # Install VIM and GIT
 RUN apt-get update && apt-get install -y \
-    git \
+    build-essential \
+    libpng-dev \
+    libjpeg62-turbo-dev \
+    libfreetype6-dev \
+    locales \
+    zip \
+    jpegoptim optipng pngquant gifsicle \
     vim \
-	unzip
+    unzip \
+    git \
+    curl \
+    cron
 
 # Install PHP libraries
 RUN apt-get update && apt-get install -y \
@@ -24,6 +35,7 @@ RUN yes | pecl install xdebug \
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+RUN chown www-data:www-data /var
 RUN usermod -u 1000 www-data
 
 USER www-data

@@ -8,8 +8,10 @@ networks:
           gateway: 10.201.0.1
 services:
     nginx:
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile
         container_name: c-nginx
-        image: nginx:latest
         restart: always
         ports:
             - "81:80"
@@ -22,6 +24,7 @@ services:
             - ./nginx/log/nginx:/var/log/nginx
         links:
             - php
+            - mysql
         networks:
             webphp:
                 ipv4_address: 10.201.0.2
@@ -31,9 +34,11 @@ services:
             dockerfile: Dockerfile
         container_name: c-php
         restart: always
+        user: www-data
         volumes:
-        - ./code:/var/www
-        - ./php/php.ini:/etc/php/7.4/fpm/php.ini
+            - ./code:/var/www
+            - ./php/php.ini:/etc/php/7.4/fpm/php.ini
+            - ./php/cron:/var/spool/cron/crontabs
         links: 
             - mysql
             - redis
@@ -43,6 +48,7 @@ services:
     mysql: 
         container_name: c-mysql
         image: mysql:latest
+        command: --default-authentication-plugin=mysql_native_password
         ports: 
             - "3308:3306"
         restart: always
