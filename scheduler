@@ -1,1 +1,0 @@
-* * * * * cd /var/www/html/nails/api && php artisan schedule:run >> /dev/null 2>&1

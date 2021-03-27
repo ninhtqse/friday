@@ -1,10 +1,4 @@
-/code/.composer
-/code/html/honi-backend
-/code/html/base-api
-/code/html/laravel-app
-/code/.bash_history
-/code/.viminfo
-/code/nails
+/code
 /mysql
 /node/node_modules
 /nginx/sites-enabled/honi.group.conf

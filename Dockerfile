@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     git \
     curl \
-    cron
+    cron 
 
 # Install PHP libraries
 RUN apt-get update && apt-get install -y \
@@ -27,10 +27,16 @@ RUN apt-get update && apt-get install -y \
 		libpng-dev
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
+#class image laravel
+RUN sudo apt-get install -y libpng-dev
+RUN sudo docker-php-ext-install gd
+
+
 RUN yes | pecl install xdebug \
     && echo "zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)" > /usr/local/etc/php/conf.d/xdebug.ini \
     && echo "xdebug.remote_enable=on" >> /usr/local/etc/php/conf.d/xdebug.ini \
     && echo "xdebug.remote_autostart=off" >> /usr/local/etc/php/conf.d/xdebug.ini
+
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -41,3 +47,5 @@ RUN usermod -u 1000 www-data
 USER www-data
 
 CMD ["php-fpm"]
+
+

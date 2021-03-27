@@ -37,7 +37,7 @@ services:
         user: www-data
         volumes:
             - ./code:/var/www
-            - ./php/php.ini:/etc/php/7.4/fpm/php.ini
+            - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
             - ./php/cron:/var/spool/cron/crontabs
         links: 
             - mysql
@@ -60,21 +60,21 @@ services:
         networks:
             webphp:
                 ipv4_address: 10.201.0.4
-    phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        container_name: 'c-phpmyadmin'
-        links:
-          - mysql
-        environment:
-          PMA_HOST: mysql
-          PMA_PORT: 3306
-        ports:
-          - '8080:80'
-        volumes: 
-          - /sessions
-        networks:
-            webphp:
-                ipv4_address: 10.201.0.5
+    # phpmyadmin:
+    #     image: phpmyadmin/phpmyadmin
+    #     container_name: 'c-phpmyadmin'
+    #     links:
+    #       - mysql
+    #     environment:
+    #       PMA_HOST: mysql
+    #       PMA_PORT: 3306
+    #     ports:
+    #       - '8080:80'
+    #     volumes: 
+    #       - /sessions
+    #     networks:
+    #         webphp:
+    #             ipv4_address: 10.201.0.5
     redis:
         container_name: c-redis
         image: redis
@@ -86,10 +86,10 @@ services:
         networks:
             webphp:
                 ipv4_address: 10.201.0.6
-    memcached:
-        image: memcached
-        ports:
-            - "11211:11211"
+    # memcached:
+    #     image: memcached
+    #     ports:
+    #         - "11211:11211"
     # node:
     #     container_name: c-node
     #     build:
