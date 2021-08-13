@@ -1,10 +1,5 @@
 /code
 /mysql
-/node/node_modules
-/nginx/sites-enabled/honi.group.conf
-/nginx/sites-enabled/laravel-app.conf
+/nginx/sites-enabled
 /nginx/log
-/node/node_modules
-/node/src
-/node/public
 /php
