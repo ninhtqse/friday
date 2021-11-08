@@ -30,7 +30,7 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 #ZIP
 COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/bin/
 RUN install-php-extensions zip
-RUN apt-get -y install gcc make autoconf libc-dev pkg-config libzip-dev
+#RUN apt-get -y install gcc make autoconf libc-dev pkg-config libzip-dev
 # COPY php.fpm.ini /etc/php7/fpm/php.ini
 # COPY php.cli.ini /etc/php7/cli/php.ini
 
